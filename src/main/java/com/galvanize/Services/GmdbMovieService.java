@@ -17,6 +17,7 @@ public class GmdbMovieService {
         this.movieRepository = movieRepository;
     }
 
+
     public List<Movie> doSearch(String title, String actors){
         if (title != null && actors != null) {
             return movieRepository.findAllByTitleContainsAndActorsContains(title, actors);
